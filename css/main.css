@@ -405,7 +405,7 @@ header .log select option {
   .features .sec-two .sec-content {
     flex-direction: column-reverse;
   }
-.features .sec-four .sec-content {
+  .features .sec-four .sec-content {
     flex-direction: column-reverse;
   }
 }
