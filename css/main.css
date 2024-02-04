@@ -405,6 +405,9 @@ header .log select option {
   .features .sec-two .sec-content {
     flex-direction: column-reverse;
   }
+.features .sec-four .sec-content {
+    flex-direction: column-reverse;
+  }
 }
 @media (width < 620px) {
   .sec-two .sec-content .imge-side .box-line {
