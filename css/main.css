@@ -675,8 +675,7 @@ header .log select option {
   margin-top: 0.5rem;
   color: white;
 }
-.last .contener {
-}
+
 .last .contener footer {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -694,8 +693,6 @@ header .log select option {
 }
 .last footer .moon p {
   margin-bottom: 20px;
-}
-.last footer .moon {
 }
 .icon select {
   background-color: transparent;
