@@ -1,5 +1,4 @@
 /* Initialize items to their original settings */
-@import url("https://prayag17.github.io/JellySkin/default.css");
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -9,13 +8,6 @@
 body {
   background-color: var(--SecitionGrayColor);
 }
-/* 
-font-family: 'Helvetica Neue', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Segoe UI', sans-serif;
- */
-
 /* Start Global Thing */
 :root {
   --MainColor: #e50914;
@@ -566,7 +558,7 @@ header .log select option {
   .ask-content > h2 {
     font-size: 18px !important;
   }
-  .ready {
+  .ask-content .ready {
     width: 80% !important;
     color: white;
     text-align: center;
