@@ -207,7 +207,7 @@ header .log select option {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.text-content .ready input[type="email"] {
+.ready input[type="email"] {
   background-color: rgba(70, 90, 126, 0.4);
   border: none;
   border-radius: var(--BorderRadius);
@@ -222,7 +222,7 @@ header .log select option {
   color: white;
   transition: 0.6s;
 }
-.text-content .ready input[type="email"]:focus {
+.ready input[type="email"]:focus {
   border: 5px solid transparent;
   outline: 5px sold white;
 }
@@ -245,7 +245,7 @@ header .log select option {
   left: 15px;
   transition: 0.2s;
 }
-.text-content .ready button {
+.ready button {
   height: 56px;
   width: 210px;
   font-size: 25px;
@@ -253,7 +253,7 @@ header .log select option {
   vertical-align: sub;
   position: relative;
 }
-.text-content .ready button::before {
+.ready button::before {
   position: absolute;
   content: "\f061";
   font-family: "Font Awesome 5 Free";
@@ -278,7 +278,7 @@ header .log select option {
     text-align: center;
     margin-top: 0px;
   }
-  .ready {
+  .ready .ask-content .ready {
     padding: 0px 15px;
   }
 }
@@ -405,6 +405,9 @@ header .log select option {
   .features .sec-two .sec-content {
     flex-direction: column-reverse;
   }
+  .features .sec-four .sec-content {
+    flex-direction: column-reverse;
+  }
 }
 @media (width < 620px) {
   .sec-two .sec-content .imge-side .box-line {
@@ -438,7 +441,7 @@ header .log select option {
   font-weight: 900;
 }
 .ask-content .cards {
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
   padding: 0px 5rem;
   display: flex;
   flex-direction: column;
@@ -456,10 +459,21 @@ header .log select option {
   cursor: pointer;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
-  margin-top: 0.5rem;
+  margin-top: -1.5rem;
+  position: relative;
+  z-index: 4;
   &:hover {
     background-color: rgb(65, 65, 65);
   }
+}
+.card::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: transparent;
 }
 .ask-content .cards .card h3 {
   font-weight: 500;
@@ -501,22 +515,211 @@ header .log select option {
   color: white;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
-  overflow: hidden;
-  transform: scaleY(0);
   transform-origin: top left;
   margin: 2px 0px;
-  padding: 1.5rem;
+  padding: 1rem;
+  cursor: help;
+  max-height: 0px;
+  overflow: hidden;
+  transform: translateY(-40px);
 }
-.show-info {
-  transform: scaleY(1);
+/* .show-info {
+  display: block; */
+/* transform: scaleY(1);
+} */
+@media (width < 992px) {
+  .asking .contener h2 {
+    font-size: 2rem;
+  }
+  .ask-content .cards {
+    padding: 0px !important;
+  }
+  .ask-content .cards .card {
+    font-size: 18px !important;
+  }
+  .ask-content .cards .card h3 {
+    font-size: 18px !important;
+  }
 }
-.card:not(:first-child) {
-  margin-top: calc(780px - 760px);
+/* .ready .ready h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+} */
+.ask-content > h2 {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  line-height: 1.5;
+  width: 100%;
+  margin-bottom: 1rem;
 }
-/* End Asking Secition */
-/* 
-  font-family: 'Helvetica Neue', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Segoe UI', sans-serif;
-   */
+.ask-content .ready {
+  /* flex-direction: column; */
+  gap: 40px 20px;
+  margin: 0 auto;
+  width: 60%;
+}
+@media (width < 992px) {
+  .ready p,
+  .ask-content > h2 {
+    font-size: 18px !important;
+  }
+  .ready {
+    width: 80% !important;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .ready {
+    padding: 0px 15px;
+  }
+}
+
+/* Form */
+.requiredOne {
+  display: none;
+  position: absolute !important;
+  bottom: -30px;
+  left: 12px;
+  font-size: 12px;
+  color: #eb3942;
+}
+.requiredOne i {
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.asl-content .ready {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px 20px;
+}
+.ask-content .box-input {
+  display: inline-block;
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+.text-content h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.asl-content .ready input[type="email"] {
+  background-color: rgba(70, 90, 126, 0.4);
+  border: none;
+  border-radius: var(--BorderRadius);
+  padding: 1rem 1rem 0.25rem;
+  height: 56px;
+  /* width: 368px; */
+  width: 100%;
+
+  margin-right: 0.5rem;
+  border: 1px solid var(--GrayColor);
+  vertical-align: middle;
+  color: white;
+  transition: 0.6s;
+}
+.asl-content .ready input[type="email"]:focus {
+  border: 5px solid transparent;
+  outline: 5px sold white;
+}
+.asl-content .requiredOne {
+  display: none;
+  position: absolute !important;
+  bottom: -30px;
+  left: 12px;
+  font-size: 12px;
+  color: #eb3942;
+}
+.asl-content .required i {
+  font-size: 15px;
+  vertical-align: middle;
+}
+.asl-content .place {
+  display: block;
+  position: absolute !important;
+  top: calc(56px / 2 - 9px);
+  left: 15px;
+  transition: 0.2s;
+}
+.asl-content .ready button {
+  height: 56px;
+  width: 210px;
+  font-size: 25px;
+  text-align: left;
+  vertical-align: sub;
+  position: relative;
+}
+.asl-content .ready button::before {
+  position: absolute;
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  right: 21px;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+/* Start Footer */
+.last {
+  background-color: black;
+  padding: 4.5rem 0px;
+  margin-top: 0.5rem;
+  color: white;
+}
+.last .contener {
+}
+.last .contener footer {
+  color: rgba(255, 255, 255, 0.7);
+}
+.last footer .holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+.last footer .holder a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.last footer .moon {
+  padding: 10px;
+}
+.last footer .moon p {
+  margin-bottom: 20px;
+}
+.last footer .moon {
+}
+.icon select {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  padding: 5px 1.15rem 5px 1.85rem;
+  border-radius: var(--BorderRadius);
+  vertical-align: middle;
+  margin-right: 20px;
+  position: relative;
+}
+.icon {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.75rem;
+}
+.icon select option {
+  color: black;
+}
+/* header .log button {
+} */
+.icon .svg {
+  position: absolute !important;
+  color: white;
+  transform: translateY(-125%);
+  left: 10px;
+}
+/* End Footer */
